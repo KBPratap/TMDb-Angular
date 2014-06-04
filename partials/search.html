@@ -1,0 +1,46 @@
+
+<h1> The Movie Database (TMDb) / Angular - Demo</h1>
+<form class="search">
+    <label>
+        Name of Actor :
+        <input type="search" ng-model="actorName" placeholder="Enter a name..." /></label>
+    <input type="button" ng-click="getActorNames()" value="Search" />
+    <span class="error" ng-show="actors.length == 0">NO MATCH FOUND !!!</span>
+</form>
+
+<form id="names" ng-show="showActors">
+</form>
+
+<div class="actorList" ng-show="actors.length > 0">
+    <div class="actors">
+        <span ng-repeat="actor in actors" ng-click="setName($index)" ng-class="{active:isActive($index), actor:true}">{{actor.name}}
+        </span>
+    </div>
+    <div class="paginate">
+        
+        <input ng-click="prev()" type="button" class="nav" value="<< prev" ng-disabled="currentPage===1"/>
+        <span>{{currentPage + " / " + totalPages}}</span>
+        <input ng-click="next()" type="button" class="nav" value="next >>" ng-disabled="currentPage===totalPages"/>
+    </div>
+</div>
+
+<div class="movie-credits">
+    <p class="error" ng-show="noMovies()" >NO MOVIE-CREDITS FOUND !!!</p>
+    <table class="movies" ng-show="movies.length > 0">
+        <thead>
+            <tr>
+                <td class="name">MOVIE TITLE</td>
+                <td class="year">RELEASE DATE</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movie in movies | orderBy : 'release_date'">
+                <td>{{movie.title}}</td>
+                <td>{{movie.release_date}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+

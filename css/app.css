@@ -1,0 +1,188 @@
+/* app css stylesheet */
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: 'Open Sans', Arial, verdana;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #999;
+    height: 100%;
+}
+
+.content
+{
+    background-color: #fff;
+    height: 100%;
+}
+
+.menu
+{
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+    .menu:before
+    {
+        content: "[";
+    }
+
+    .menu:after
+    {
+        content: "]";
+    }
+
+    .menu > li
+    {
+        display: inline;
+    }
+
+        .menu > li:before
+        {
+            content: "|";
+            padding-right: 0.3em;
+        }
+
+        .menu > li:nth-child(1):before
+        {
+            content: "";
+            padding: 0;
+        }
+
+h1
+{
+    text-align: center;
+    margin: 0px auto;
+    padding: 25px 0 15px 0;
+    background-color: #444;
+    color: #eee;
+}
+
+.search
+{
+    padding: 20px 15px;
+    background-color: #ddd;
+    border-bottom: 1px solid #aaa;
+}
+
+    .search *
+    {
+        font-size: 1.1em;
+    }
+
+.actorList
+{
+    border-bottom: 1px solid #aaa;
+    padding: 15px 0 0 0;
+    /*padding: 15px 10px 35px 25px;*/
+    text-align: center;
+}
+
+.paginate
+{
+    text-align: right;
+    padding: 5px;
+    margin: 5px 0 0 0;
+    background-color: #fff;
+}
+
+    .paginate > span
+    {
+        margin: 0px 5px;
+        padding: 3px;
+        min-width: 50px;
+        display: inline-block;
+        text-align: center;
+        color: #00f;
+    }
+
+    .paginate > .nav
+    {
+        font-weight: bold;
+        /*
+        border: 1px solid #acf;
+        background-color: #acd;
+        border-radius: 3px;
+    */
+    }
+
+.actors
+{
+    margin: 0 auto 10px;
+    display: inline;
+}
+
+span.actor
+{
+    padding: 5px;
+    margin: 5px;
+    min-width: 150px;
+    width: auto;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+
+    span.actor:hover
+    {
+        background-color: #acd;
+    }
+
+span.active
+{
+    background-color: #555;
+    color: #fff;
+}
+
+.movies
+{
+    margin: 10px auto;
+}
+
+    .movies > thead
+    {
+        font-weight: bold;
+        background-color: #777;
+        color: #eee;
+        text-align: center;
+    }
+
+    .movies tbody tr:nth-child(2n)
+    {
+        background-color: #efefef;
+    }
+
+    .movies td
+    {
+        padding: 2px;
+    }
+
+    .movies .name
+    {
+        min-width: 250px;
+    }
+
+    .movies .year
+    {
+        min-width: 200px;
+    }
+
+.movie-credits .error
+{
+    text-align: center;
+    display: block;
+}
+
+.error
+{
+    color: #f22;
+    font-weight: bold;
+    padding: 10px;
+}
