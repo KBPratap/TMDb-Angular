@@ -174,6 +174,10 @@ span.active
         min-width: 200px;
     }
 
+	.movie-credits{
+		height: 40%;
+		overflow: auto;
+	}
 .movie-credits .error
 {
     text-align: center;

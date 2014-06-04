@@ -68,7 +68,7 @@ angular.module('myApp.controllers', [])
           path += "/movie_credits?api_key=f58bd80f6749b632ace312c794e314e6"//&page=1000"///movie_credits
 
           $http.get(path).success(function (data) {
-              $scope.movies = data.crew;
+              $scope.movies = data.cast;
           });
       };
       $scope.noMovies = function () {
